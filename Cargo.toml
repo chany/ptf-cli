@@ -1,0 +1,17 @@
+[package]
+name = "ptf-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["Chan Y. PARK"]
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+num = "0.4.3"
+plotters = { version = "0.3.6", features = ["bitmap_backend"] }
+rayon = "1.10.0"
+
+[profile.release]
+strip = true
+opt-level = "s"
+lto = true
+codegen-units = 1
