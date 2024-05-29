@@ -9,7 +9,7 @@ pub struct Args {
     pub center: (f64, f64),
 
     /// 중앙좌표로부터 그릴 ± x 범위: ± y는 ± x와 같음
-    #[arg(short = 'd', long = "delta", default_value_t = 5.0)]
+    #[arg(short = 'e', long = "eps", default_value_t = 5.0)]
     pub delta: f64,
 
     /// 해상도: 512, 1024, 2048, 4096, ...
@@ -21,7 +21,7 @@ pub struct Args {
     pub max_iter: usize,
 
     /// 복소수 크기가 escape_radius를 벗어나면 발산한 것으로 처리
-    #[arg(short = 'e', long = "escape", default_value_t = 1e+10)]
+    #[arg(short = 'x', long = "escape", default_value_t = 1e+10)]
     pub escape_radius: f64,
 }
 
